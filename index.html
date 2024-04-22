@@ -43,6 +43,8 @@ ROOM 0
 0,a,a,a,a,a,a,a,a,a,a,a,a,a,a,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME example room
+ITM 1 9,8
+ITM 0 7,8
 PAL 0
 TUNE 2
 
@@ -58,17 +60,26 @@ TIL a
 NAME block
 
 SPR A
+00000000
 00011000
 00011000
-00011000
-00111100
+10000001
 01111110
-10111101
+00111100
 00100100
 00100100
-POS 0 4,4
+POS 0 5,5
 
 SPR a
+00000000
+00000000
+01010000
+01110000
+01110011
+01111101
+00111100
+00100100
+>
 00000000
 00000000
 01010001
@@ -79,7 +90,7 @@ SPR a
 00100100
 NAME cat
 DLG 0
-POS 0 8,12
+POS 0 12,8
 BLIP 1
 
 ITM 0
@@ -108,7 +119,7 @@ DLG 2
 BLIP 2
 
 DLG 0
-I'm a cat
+I'm a cat... {shk}{rbw}I like fish{/rbw}{/shk}! {drws "A"} has found {say {item "1"}} keys!
 NAME cat dialog
 
 DLG 1
@@ -119,13 +130,13 @@ DLG 2
 A key! {wvy}What does it open?{wvy}
 NAME key dialog
 
+DLG 3
+ Halllooooo!
+
 VAR a
 42
 
 TUNE 1
-3d,0,0,0,3d5,0,0,0,3l,0,0,0,3s,0,0,0
-16d2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
->
 4l,0,0,0,s,0,3l,0,0,0,2s,0,2m,0,2r,0
 16m2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 >
@@ -134,6 +145,9 @@ TUNE 1
 >
 3l,0,0,0,s,0,4m,0,0,0,4r,0,0,0,0,0
 16s2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+>
+3d,0,0,0,3d5,0,0,0,3l,0,0,0,3s,0,0,0
+16d2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 NAME finale fanfare
 KEY C,D,E,F,G,A,B d,r,m,s,l
 TMP XFST
@@ -197,7 +211,7 @@ TMP MED
 SQR P4 P4
 
 BLIP 1
-E5,B5,B5
+C#5,G#5,G#5
 NAME meow
 ENV 40 99 4 185 138
 BEAT 61 115
@@ -209,6 +223,36 @@ NAME pick up key
 ENV 99 65 6 96 152
 BEAT 95 0
 SQR P4
+
+BLIP 3
+A5,G#5,D5
+NAME pick up 1
+ENV 79 65 2 143 86
+BEAT 89 0
+SQR P8
+
+BLIP 4
+D#,F#,F#2
+NAME another
+ENV 237 105 2 237 132
+BEAT 288 101
+SQR P8
+RPT 1
+
+BLIP 5
+G,B3,F5
+NAME random 1
+ENV 451 271 6 430 128
+BEAT 17 199
+SQR P4
+
+BLIP 6
+C,C#,D#3
+NAME random 2
+ENV 394 475 10 251 388
+BEAT 455 434
+SQR P4
+RPT 1
 
 
 </script>
